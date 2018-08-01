@@ -10,9 +10,7 @@ import javax.persistence.Table;
 @Entity
 @Table(name = "userdata")
 public class UserData {
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Id
-	private int id;
 	@Column (name = "username")
 	private String username;
 	@Column (name = "firstname")
@@ -124,13 +122,6 @@ public class UserData {
 		this.email = email;
 	}
 
-	public int getId() {
-		return id;
-	}
-
-	public void setId(int id) {
-		this.id = id;
-	}
 
 
 	public int getLevel() {

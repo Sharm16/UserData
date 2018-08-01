@@ -35,17 +35,17 @@ public class UserController {
 		return service.addUser(user);
 	}
 
-	@RequestMapping("/test")
-	@ResponseBody
-	public UserData test() {
-		return service.test();
-	}
-
+	
 	@RequestMapping("/deleteUser/{id}")
 	@ResponseBody
 	public String deleteUser(@PathVariable("id") int id) {
 		return service.deleteUser(id);
 
+	}
+	@RequestMapping("/updateUser")
+	@ResponseBody
+	public UserData updateUser(@RequestBody UserData user) {
+		return service.updateUser(user);
 	}
 
 	public void setService(UserService service) {
